@@ -80,3 +80,16 @@
   border-radius: 8rpx;
   margin-right: 10rpx;
 }
+
+.login {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.login image{
+  width: 30rpx;
+  height: 30rpx;
+}

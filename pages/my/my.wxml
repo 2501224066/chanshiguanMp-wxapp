@@ -1,9 +1,12 @@
 <view class="top">
 	<view class="some">
-		<image src="/image/header.png"></image>
-		<view>
-			<view class="nickname">铲屎官昵称</view>
+		<image src="{{userInfo.avatar ? userInfo.avatar : '/image/header.png'}}"></image>
+		<view wx:if="{{loginStatus}}">
+			<view class="nickname">{{userInfo.nickname ? userInfo.nickname : '用户名'}}</view>
 			<view class="autograph">还没有发表签名</view>
+		</view>
+		<view class="login" wx:if="{{!loginStatus}}" bindtap="goto">
+			<view>暂未登录</view>
 		</view>
 	</view>
 	<view class="count">
@@ -15,18 +18,18 @@
 </view>
 
 <view class="ul">
-	<view class="li">
+	<view class="li" bindtap="goto">
 		<view>我的宠物</view>
 		<image class="right" src="/image/right.png"></image>
 	</view>
 </view>
 
 <view class="ul">
-	<view class="li">
+	<view class="li" bindtap="goto">
 		<view>云吸的宠物</view>
 		<image class="right" src="/image/right.png"></image>
 	</view>
-	<view class="li">
+	<view class="li" bindtap="goto">
 		<view>宠物领养</view>
 		<span class="red"></span>
 		<image class="right" src="/image/right.png"></image>

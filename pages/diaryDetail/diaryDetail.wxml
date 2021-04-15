@@ -4,7 +4,7 @@
 	<view class="top">
 		<image class="header" src="{{petDiary.petImg}}"></image>
 		<view class="name">{{petDiary.petName}}</view>
-		<image class="follow" src="/image/follow.png"></image>
+		<image class="follow" src="/image/add.png"></image>
 	</view>
 
 	<!-- 轮播 -->
@@ -18,8 +18,8 @@
 			</block>
 		</swiper>
 		<view class="img-box-2">
-			<image class="{{index==current? 'avtive' : ''}}" wx:for="{{imgList}}" wx:key src="{{item}}" 
-			bindtap="check" data-key="{{index}}"></image>
+			<image mode="aspectFill" class="{{index==current? 'avtive' : ''}}" wx:for="{{imgList}}" wx:key wx:if="{{index < 6}}" src="{{item}}"
+				bindtap="check" data-key="{{index}}"></image>
 		</view>
 	</view>
 
@@ -29,32 +29,39 @@
 		<view class="content">{{petDiary.content}}</view>
 		<view class="time">发表于{{util.time(petDiary.createdTime)}}</view>
 	</view>
-</view>
 
-<view class="comment">
-	<view class="comment-num">全部评论 {{commentList.length}}</view>
-	<view wx:for="{{commentList}}">
-		<view class="comment-body">
-			<view class="comment-header">
-				<image src="{{item.headImg ? item.headImg : '/image/header.png'}}"></image>
-			</view>
-			<view class="comment-c">
-				<view>{{item.nickName}}
-					<image class="like" src="/image/like.png"></image>
+	<!-- 添加评论 -->
+	<view class="add-comm" bindtap="comShow">
+		<image src="../../image/header.png"></image>
+		<view>请发表你的吸后感～</view>
+	</view>
+
+	<!-- 所有评论 -->
+	<view class="comment">
+		<view class="comment-num">评论 <span wx:if="{{commentList.length}}">{{commentList.length}}</span></view>
+		<view wx:for="{{commentList}}">
+			<view class="comment-body">
+				<view class="comment-header">
+					<image src="{{item.headImg ? item.headImg : '/image/header.png'}}"></image>
 				</view>
-				<view>{{item.content}}</view>
-				<view>{{util.time(item.createdTime)}}</view>
-				<!-- 二级评论 -->
-				<view class="comment-body" wx:for="{{item.childs}}">
-					<view class="comment-header2">
-						<image src="{{item.headImg ? item.headImg : '/image/header.png'}}"></image>
+				<view class="comment-c">
+					<view>{{item.nickName}}
+						<image class="like" src="/image/like.png"></image>
 					</view>
-					<view class="comment-c">
-						<view>{{item.nickName}}
-							<image class="like" src="/image/like.png"></image>
+					<view>{{item.content}}</view>
+					<view>{{util.time(item.createdTime)}}</view>
+					<!-- 二级评论 -->
+					<view class="comment-body" wx:for="{{item.childs}}">
+						<view class="comment-header2">
+							<image src="{{item.headImg ? item.headImg : '/image/header.png'}}"></image>
 						</view>
-						<view>{{item.content}}</view>
-						<view>{{util.time(item.createdTime)}}</view>
+						<view class="comment-c">
+							<view>{{item.nickName}}
+								<image class="like" src="/image/like.png"></image>
+							</view>
+							<view>{{item.content}}</view>
+							<view>{{util.time(item.createdTime)}}</view>
+						</view>
 					</view>
 				</view>
 			</view>
@@ -62,7 +69,26 @@
 	</view>
 </view>
 
+<!-- 撑开底部 -->
+<view class="openup"></view>
+
+<!-- 分享 -->
 <view class="share">
-	<view><image src="/image/absorb.png"></image>云吸</view>
-	<view><image src="/image/wx.png"></image>分享到微信</view>
+	<view>
+		<image src="/image/absorb.png"></image>云吸
+	</view>
+	<view>
+		<image src="/image/wx.png"></image>分享到微信
+	</view>
+</view>
+
+<!-- 评论模态 -->
+<view class="cominput" wx:if="{{comShow}}">
+	<view class="cominput-bg" catchtap="comShow" catchtouchmove="preventTouchMove"></view>
+	<view class="combox">
+		<view class="input">
+			<input type="text" placeholder="请发表你的吸后感" placeholder-class="input-pl" />
+		</view>
+		<view class="comsub">发送</view>
+	</view>
 </view>

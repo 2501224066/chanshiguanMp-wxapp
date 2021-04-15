@@ -1,6 +1,7 @@
 import {
   petDiaryInfoGetDiaryDetail,
-  petDiaryInfoGetCommectLists
+  petDiaryInfoGetCommectLists,
+  postStatisticQuery
 } from '../../config/api'
 
 Page({
@@ -10,7 +11,8 @@ Page({
     imgheights: [], // 图片高度数组
     petDiary: {},
     current: 0, // 默认图片索引
-    commentList: {}
+    commentList: {},
+    comShow: false
   },
 
   onLoad(options) {
@@ -32,7 +34,14 @@ Page({
         imgList: res.data.petDiary.mediaUrl.split(";"),
         petDiary: res.data.petDiary,
       })
+      this.loadNum()
     })
+  },
+
+  // 帖子点赞数
+  loadNum() {
+    let repair = "?isNeedSniff=false&postIds=" + this.data.id + "&type=1"
+    postStatisticQuery(null, repair)
   },
 
   // 获取评论
@@ -74,10 +83,20 @@ Page({
   },
 
   // 预览图片
-  lookImg(e){
+  lookImg(e) {
     wx.previewImage({
       current: this.data.imgList[e.target.dataset.id],
       urls: this.data.imgList
     })
-  }
+  },
+
+  // 评论模态
+  comShow() {
+    this.setData({
+      comShow: !this.data.comShow
+    })
+  },
+
+  // 阻止蒙板背面移动
+  preventTouchMove() {}
 })

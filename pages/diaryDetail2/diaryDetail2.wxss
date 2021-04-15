@@ -3,8 +3,9 @@ page{
 }
 
 swiper{
-  height: 92vh;
+  height: 100vh;
 }
+
 
 .stop{
   position: absolute;
@@ -19,15 +20,21 @@ swiper{
 
 .video {
   width: 100%;
-  height: 92vh;
+  height: 90vh;
   background: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-video {
+.video2{
   width: 100%;
+  height: 111vh;
+}
+
+video{
+  width: 100%;
+  height: 100%;
 }
 
 .about {
@@ -45,7 +52,6 @@ video {
 
 .name>span {
   font-size: 24rpx;
-  color: #999;
   margin-left: 10rpx;
 }
 
@@ -61,21 +67,24 @@ video {
 .op {
   position: fixed;
   right: 3%;
-  bottom: 30rpx;
+  bottom: 48rpx;
   display: flex;
   flex-direction: column;
   color: #fff;
   font-size: 22rpx;
+  z-index: 2;
 }
 
 .header {
   width: 80rpx;
   height: 80rpx;
   border-radius: 50rpx;
+  border: 2rpx solid #fff;
+  background: #fff;
 }
 
 .op>view {
-  margin-top: 30rpx;
+  margin-top: 50rpx;
   text-align: center;
 }
 
@@ -84,34 +93,42 @@ video {
   height: 60rpx;
 }
 
+.op>view:last-child>image{
+  width: 54rpx;
+  height: 54rpx;
+}
+
 .chat {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
   width: 100%;
-  padding: 0 5%;
+  padding-top: 10rpx;
   box-sizing: border-box;
-  height: 8vh;
+  height: 10vh;
   background: #000;
 }
 
 .chat>view {
   width: 80%;
-  height: 80%;
+  margin-top: 2vh;
   padding: 0 20rpx;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 4vh;
-  background: #1e1e1e;
 }
 
 .chat image {
-  width: 46rpx;
-  height: 46rpx;
-  margin-right: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
 }
 
 .chat input {
   flex: 1;
-  font-size: 28rpx;
+  font-size: 24rpx;
   color: #fff;
 }

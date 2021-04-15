@@ -1,0 +1,31 @@
+page {
+  background: #fff;
+}
+
+.logo {
+  text-align: center;
+}
+
+image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 90rpx;
+  margin: 10vh 0;
+}
+
+.wx-login {
+  font-weight: 300;
+  width: 80% !important;
+  margin: 0 10%;
+  color: #fff;
+  background: #9147ff;
+}
+
+.zp-login {
+  font-weight: 300;
+  width: 80% !important;
+  margin: 30rpx 10%;
+  color: #333;
+  background: #fff;
+  border: 1rpx solid #eee;
+}

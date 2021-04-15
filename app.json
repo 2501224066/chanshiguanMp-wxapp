@@ -4,7 +4,9 @@
     "pages/adopt/adopt",
     "pages/my/my",
     "pages/diaryDetail/diaryDetail",
-    "pages/diaryDetail2/diaryDetail2"
+    "pages/diaryDetail2/diaryDetail2",
+    "pages/login/login",
+    "pages/auth/auth"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -13,8 +15,9 @@
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
+    "borderStyle": "white",
     "selectedColor": "#000000",
-    "color": "#2E2E2E",
+    "color": "#9c9c9c",
     "backgroundColor": "#ffffff",
     "list": [{
         "pagePath": "pages/index/index",

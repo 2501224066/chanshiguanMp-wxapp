@@ -1,16 +1,24 @@
 import {
-  petDiaryInfoGetDiary
+  petDiaryInfoGetDiary,
+  postStatisticQuery
 } from '../../config/api'
 
 Page({
   data: {
-    lsit: [],
+    list: [],
+    loadNum: {},
     page: 1,
     pageSize: 15
   },
 
   onLoad() {
     this.getData()
+  },
+
+  onShow() {
+    if (this.data.list.length) {
+      this.loadNum()
+    }
   },
 
   getData(addStatus = false) {
@@ -28,6 +36,25 @@ Page({
           list: res.data
         })
       }
+      this.loadNum()
+    })
+  },
+
+  // 帖子点赞数
+  loadNum() {
+    let postIds = ''
+    this.data.list.forEach(element => {
+      postIds += "&postIds=" + element.petDiaryDto.id
+    });
+    let repair = "?isNeedSniff=false" + postIds + "&type=1"
+    postStatisticQuery(null, repair).then(res => {
+      let loadNum = {}
+      res.data.forEach(element => {
+        loadNum[element.postId] = element.loadNum
+      });
+      this.setData({
+        loadNum: loadNum
+      })
     })
   },
 
@@ -43,7 +70,7 @@ Page({
   toDetail(e) {
     if (e.currentTarget.dataset.videoid) {
       wx.navigateTo({
-        url: '/pages/diaryDetail2/diaryDetail2?id=' + e.currentTarget.dataset.id,
+        url: '/pages/diaryDetail2/diaryDetail2?id=' + e.currentTarget.dataset.videoid,
       })
     } else {
       wx.navigateTo({

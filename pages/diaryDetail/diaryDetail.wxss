@@ -53,25 +53,25 @@ swiper image {
 }
 
 .img-box-2 {
-  height: 100rpx;
-  overflow: hidden;
+  height: 116rpx;
+  display: flex;
   padding: 8rpx 0;
 }
 
 .img-box-2>image {
-  float: left;
-  width: 100rpx;
-  height: 100rpx;
+  justify-content: left;
+  width: 116rpx;
+  height: 116rpx;
   margin: 0 4rpx;
   box-sizing: border-box;
 }
 
 .img-box-2>image:first-child {
-  margin-left: 0;
+  margin-left: 8rpx;
 }
 
 .img-box-2>image:last-child {
-  margin-right: 0;
+  margin-right: 8rpx;
 }
 
 .avtive {
@@ -79,13 +79,13 @@ swiper image {
 }
 
 .body {
-  padding: 0 3% 20rpx 3%;
+  padding: 0 4% 20rpx 4%;
 }
 
 .num {
   margin: 20rpx 0;
   color: #999;
-  font-size: 24rpx;
+  font-size: 26rpx;
 }
 
 .title {
@@ -94,7 +94,7 @@ swiper image {
 }
 
 .content {
-  font-size: 28rpx;
+  font-size: 30rpx;
   color: #666;
   margin-bottom: 20rpx;
 }
@@ -106,7 +106,7 @@ swiper image {
 
 .comment {
   margin-top: 4rpx;
-  padding: 30rpx 3%;
+  padding: 30rpx 4%;
   background: #fff;
 }
 
@@ -172,17 +172,27 @@ swiper image {
   border-radius: 20rpx;
 }
 
+.openup{
+  width: 100%;
+  height: 130rpx;
+}
+
+
 .share {
-  margin-top: 4rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   background: #fff;
+  padding-bottom: 20rpx;
 }
 
 .share>view {
   width: 50%;
-  height: 80rpx;
-  line-height: 80rpx;
+  height: 100rpx;
+  line-height: 100rpx;
   color: #999;
   font-size: 26rpx;
   display: flex;
@@ -194,4 +204,98 @@ swiper image {
   width: 46rpx;
   height: 46rpx;
   margin-right: 10rpx;
+}
+
+.add-comm {
+  margin: 20rpx 4%;
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-comm>image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  margin-right: 25rpx;
+}
+
+.add-comm>view {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 27rpx;
+  font-size: 24rpx;
+  color: #999;
+  border-radius: 27rpx;
+  flex: 1;
+  background: #f5f5f5;
+}
+
+.cominput {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 2;
+}
+
+.cominput-bg{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 3;
+}
+
+
+.combox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 130rpx;
+  padding-bottom: 20rpx;
+  background: #fff;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.combox>.input {
+  width: 74%;
+  height: 70rpx;
+  background: #f3f3f3;
+  padding: 0 10rpx;
+  border-radius: 10rpx;
+  margin: 0 5%;
+}
+
+.input>input {
+  width: 100%;
+  height: 74rpx;
+  font-size: 26rpx;
+  caret-color: #9147ff;
+}
+
+.input-pl {
+  color: #c1c1c1;
+}
+
+.comsub{
+  flex: 1;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #fff;
+  background:#9147ff;
+  margin-right: 2%;
+  border-radius: 10rpx;
 }

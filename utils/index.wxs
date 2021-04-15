@@ -22,7 +22,17 @@ function time(milliseconds) {
   return Y + "." + m + "." + d
 }
 
+// 字符串限制长度
+var strHid = function (str, length = 6) {
+  var ret = str.substring(0, length)
+  if (str.length > length) {
+    ret += "..."
+  }
+  return ret
+}
+
 module.exports = {
   oneImg: oneImg,
-  time: time
+  time: time,
+  strHid: strHid
 }

@@ -5,6 +5,7 @@ import {
 const go = function (obj) {
   wx.showLoading({
     title: '加载中',
+    duration: 2000,
     mask: true
   })
   return new Promise((resolve, reject) => {

@@ -1,19 +1,24 @@
+<wxs src="../../utils/index.wxs" module="util" />
+
 <swiper bindchange="bindchange" bindchange="bindchange" current="{{current}}" vertical="{{true}}">
-	<block wx:for="{{videoList}}" wx:key>
+	<block wx:for="{{list}}" wx:key>
 		<swiper-item bindtap="opVideo">
-		<image wx:if="{{stopShow}}" class="stop" src="/image/stop.png"></image>
-			<view class="video" >
-				<video id="v{{item.id}}" autoplay="{{false}}" loop="{{true}}" enable-play-gesture="{{true}}" show-fullscreen-btn="{{false}}" 
-				controls="{{false}}" enable-play-gesture="{{false}}" src="{{item.url}}"></video>
+			<image wx:if="{{stopShow}}" class="stop" src="/image/video.png"></image>
+			<view class="video">
+				<view class="video2">
+					<video id="v{{index}}" autoplay="{{false}}" loop="{{true}}" enable-play-gesture="{{true}}"
+						show-fullscreen-btn="{{false}}" controls="{{false}}" enable-play-gesture="{{false}}" src="{{item.videoUrl}}"
+						poster="{{item.coverUrl}}"></video>
+				</view>
 			</view>
 		</swiper-item>
 	</block>
 </swiper>
 
 <view class="about">
-	<view class="name">@二狗今天很欢乐<span>2019-09-12</span></view>
-	<view class="title">很会配合的狗子</view>
-	<view class="content">主动营业</view>
+	<view class="name">@{{list[current].petName}}<span>{{util.time(list[current].createdTime)}}</span></view>
+	<view class="title">{{list[current].title}}</view>
+	<view class="content">{{list[current].description}}</view>
 </view>
 
 <view class="op">

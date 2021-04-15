@@ -5,15 +5,17 @@
 		<view class="list" wx:for="{{list}}" wx:key wx:if="{{index%2 == 0}}"
 		bindtap="toDetail"  data-videoid="{{item.petDiaryDto.videoId}}" data-id="{{item.petDiaryDto.id}}">
 			<image class="viedo-icon" wx:if="{{item.petDiaryDto.videoId}}" src="/image/video.png"></image>
-			<image class="img" src="{{util.oneImg(item.petDiaryDto.mediaUrl)}}" mode="widthFix"></image>
+				<image class="img {{item.petDiaryDto.videoId ? 'img-h' : ''}}" 
+				src="{{util.oneImg(item.petDiaryDto.mediaUrl)}}" 
+				mode="{{item.petDiaryDto.videoId ? 'aspectFill' : 'widthFix'}}"></image>
 			<view class="about">
 				<view class="title">{{item.petDiaryDto.title}}</view>
 				<view class="about-bottom">
-					<image class="header" src="{{item.petDiaryDto.headImg}}">
+					<image class="header" src="{{item.petDiaryDto.petImg}}">
 					</image>
-					<view class="name">{{item.petDiaryDto.petName}}</view>
-					<image class="absorb" src="/image/absorb.png"></image>
-					<view class="num">255</view>
+					<view class="name">{{util.strHid(item.petDiaryDto.petName)}}</view>
+					<view class="num">{{loadNum[item.petDiaryDto.id]}}</view>
+					<image class="absorb" src="/image/eye.png"></image>
 				</view>
 			</view>
 		</view>
@@ -23,15 +25,17 @@
 		<view class="list" wx:for="{{list}}" wx:key wx:if="{{index%2 == 1}}"
 		bindtap="toDetail"  data-videoid="{{item.petDiaryDto.videoId}}" data-id="{{item.petDiaryDto.id}}">
 			<image class="viedo-icon" wx:if="{{item.petDiaryDto.videoId}}" src="/image/video.png"></image>
-			<image class="img" src="{{util.oneImg(item.petDiaryDto.mediaUrl)}}" mode="widthFix"></image>
+				<image class="img {{item.petDiaryDto.videoId ? 'img-h' : ''}}" 
+				src="{{util.oneImg(item.petDiaryDto.mediaUrl)}}" 
+				mode="{{item.petDiaryDto.videoId ? 'aspectFill' : 'widthFix'}}"></image>
 			<view class="about">
 				<view class="title">{{item.petDiaryDto.title}}</view>
 				<view class="about-bottom">
-					<image class="header" src="{{item.petDiaryDto.headImg}}">
+					<image class="header" src="{{item.petDiaryDto.petImg}}">
 					</image>
 					<view class="name">{{item.petDiaryDto.petName}}</view>
-					<image class="absorb" src="/image/absorb.png"></image>
-					<view class="num">255</view>
+					<view class="num">{{loadNum[item.petDiaryDto.id]}}</view>
+					<image class="absorb" src="/image/eye.png"></image>
 				</view>
 			</view>
 		</view>

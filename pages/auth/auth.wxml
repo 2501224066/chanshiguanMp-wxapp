@@ -1,0 +1,5 @@
+<view class="logo">
+  <image src="../../image/logo.png"></image>
+</view>
+<button class="wx-login" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权用户信息</button>
+<button class="zp-login" bindtap="toIndex">返回首页</button>
