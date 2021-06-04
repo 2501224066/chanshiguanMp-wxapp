@@ -1,0 +1,162 @@
+<view class="adopt-list">
+  <!-- 顶部导航 -->
+  <navbar type="1" title="宠物领养"></navbar>
+
+  <!-- Tab -->
+  <view class="tab">
+    <view class="item {{index == tabIndex ? 'sel' :''}}" wx:for="{{tab}}" wx:key="index" bindtap="checkoutTab"
+      data-index="{{index}}">
+      <view class="img" wx:if="{{index == 2}}">
+        <image src="/image/dot.png" mode="aspectFill"></image>
+      </view>
+      {{item}}
+    </view>
+  </view>
+
+  <!-- 列表 -->
+  <view class="list">
+    <!-- 我的发布 -->
+    <view class="item" wx:if="{{tabIndex == 0}}" wx:for="{{5}}">
+      <view class="top">
+        <view class="img">
+          <image src="/image/defaultHeader.png" mode="aspectFill"></image>
+        </view>
+        <view class="r">
+          <view class="name">小飞机</view>
+          <view class="info">
+            <view class="sex">
+              <view class="img">
+                <image src="/image/sex1.png" mode="aspectFill"></image>
+              </view>
+            </view>
+            <view class="breed">布偶猫</view>
+            <view class="age">8岁</view>
+          </view>
+        </view>
+      </view>
+      <view class="content">
+        <view class="l">
+          <view class="btn">撤销</view>
+          <view class="btn">修改</view>
+        </view>
+        <view class="r">
+          <view class="btn2">申请人</view>
+        </view>
+      </view>
+      <view class="footer">
+        <view class="notice">
+          <view class="img">
+            <image src="/image/horn.png" mode="aspectFill"></image>
+          </view>
+          <view>已有3人申请了领养，等待挑选。</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 我的申请 -->
+    <view class="item" wx:if="{{tabIndex == 1}}" wx:for="{{5}}">
+      <view class="top">
+        <view class="img">
+          <image src="/image/defaultHeader.png" mode="aspectFill"></image>
+        </view>
+        <view class="r">
+          <view class="name">小飞机</view>
+          <view class="info">
+            <view class="sex">
+              <view class="img">
+                <image src="/image/sex1.png" mode="aspectFill"></image>
+              </view>
+            </view>
+            <view class="breed">布偶猫</view>
+            <view class="age">8岁</view>
+          </view>
+        </view>
+      </view>
+      <view class="content">
+        <view class="l">
+          <view class="btn">取消申请</view>
+        </view>
+        <view class="r">
+          <view class="btn3">私信</view>
+        </view>
+      </view>
+      <view class="footer">
+        <view class="notice">
+          <view class="img">
+            <image src="/image/horn.png" mode="aspectFill"></image>
+          </view>
+          <view>已有3人申请了领养，等待挑选。</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 领养协议 -->
+    <view class="item" wx:if="{{tabIndex == 2}}" wx:for="{{5}}">
+      <view class="top">
+        <view class="img">
+          <image src="/image/defaultHeader.png" mode="aspectFill"></image>
+        </view>
+        <view class="r">
+          <view class="name">小飞机</view>
+          <view class="info">
+            <view class="sex">
+              <view class="img">
+                <image src="/image/sex1.png" mode="aspectFill"></image>
+              </view>
+            </view>
+            <view class="breed">布偶猫</view>
+            <view class="age">8岁</view>
+          </view>
+        </view>
+      </view>
+      <view class="content">
+        <view class="l">
+          <view class="btn">重选</view>
+          <view class="btn4">电话</view>
+          <view class="btn3">私信</view>
+        </view>
+        <view class="r">
+          <view class="btn2">领养协议</view>
+        </view>
+      </view>
+      <view class="footer">
+        <view class="notice">
+          <view class="img">
+            <image src="/image/horn.png" mode="aspectFill"></image>
+          </view>
+          <view>已有3人申请了领养，等待挑选。</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 领养码 -->
+    <view class="item" wx:if="{{tabIndex == 3}}" wx:for="{{5}}">
+      <view class="top">
+        <view class="img">
+          <image src="/image/defaultHeader.png" mode="aspectFill"></image>
+        </view>
+        <view class="r">
+          <view class="name">小飞机</view>
+          <view class="info">
+            <view class="sex">
+              <view class="img">
+                <image src="/image/sex1.png" mode="aspectFill"></image>
+              </view>
+            </view>
+            <view class="breed">布偶猫</view>
+            <view class="age">8岁</view>
+          </view>
+        </view>
+        <view class="code">
+          <view class="img">
+            <image src="/image/auth.png" mode="aspectFill"></image>
+          </view>
+          <view class="btn2">
+            获取领养码
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

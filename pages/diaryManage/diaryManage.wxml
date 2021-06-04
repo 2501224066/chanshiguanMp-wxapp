@@ -1,0 +1,33 @@
+<view class="diary-manage">
+  <!-- 顶部导航 -->
+  <navbar type="1" title="日记管理"></navbar>
+
+  <!-- 列表 -->
+  <view class="list">
+    <view class="item" wx:for="{{2}}">
+      <view class="top">
+        <view class="img">
+          <image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=174079424,330439059&fm=26&gp=0.jpg"
+            mode="aspectFill"></image>
+        </view>
+        <view class="content">
+          <view class="title">家里有两只猫，能和新来的</view>
+          <view class="time">2021-04-09 12:50</view>
+          <view class="op">
+            <view class="btn1">取消</view>
+            <view class="btn">置顶</view>
+            <view class="btn">删除</view>
+            <view class="btn">编辑</view>
+          </view>
+        </view>
+      </view>
+      <view class="footer">
+        <view>888 浏览</view>
+        <view>88 评论</view>
+        <view>12 收藏</view>
+        <view>88 云吸 </view>
+        <view>37 分享</view>
+      </view>
+    </view>
+  </view>
+</view>

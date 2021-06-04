@@ -1,0 +1,8 @@
+<view class="agreement">
+  <!-- 顶部导航 -->
+  <navbar type="1" title="{{memo[memoIndex].title}}"></navbar>
+
+  <view class="content">
+    <text>{{memo[memoIndex].content}}</text>
+  </view>
+</view>

@@ -1,0 +1,77 @@
+.pets-card {
+  background: #fff;
+  padding: 22rpx 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.img {
+  width: 147rpx;
+  height: 147rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.center {
+  flex: 1;
+  height: 147rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 23rpx;
+}
+
+.center>.name {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.center>.info {
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  line-height: 43rpx;
+}
+
+.center>.info>view {
+  margin-right: 10rpx;
+}
+
+.center>.info>.sex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f1eff7;
+  width: 43rpx;
+  height: 43rpx;
+}
+
+.center>.info>.sex>.img {
+  margin: auto;
+  width: 13rpx;
+  height: 21rpx;
+  line-height: 0;
+}
+
+.center>.info>.breed {
+  color: #43CF7C;
+  background: #f4fdf8;
+  padding: 0 10rpx;
+}
+
+.center>.info>.age {
+  background: #fef9f3;
+  color: #FF8D1A;
+  padding: 0 10rpx;
+}
+
+.center>.memo {
+  font-size: 28rpx;
+  color: #939393;
+}
+
+.r{
+  width: 32rpx;
+  height: 32rpx;
+}

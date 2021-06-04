@@ -1,23 +1,39 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/adopt/adopt",
+    "pages/diary/diary",
+    "pages/pets/pets",
+    "pages/news/news",
     "pages/my/my",
-    "pages/diaryDetail/diaryDetail",
-    "pages/diaryDetail2/diaryDetail2",
+    "pages/petShow/petShow",
     "pages/login/login",
-    "pages/auth/auth"
+    "pages/agreement/agreement",
+    "pages/adoptDetail/adoptDetail",
+    "pages/applicant/applicant",
+    "pages/applyAdopt/applyAdopt",
+    "pages/releaseAdopt/releaseAdopt",
+    "pages/photoDiary/photoDiary",
+    "pages/collect/collect",
+    "pages/draft/draft",
+    "pages/selfSpace/selfSpace",
+    "pages/userInfoEdit/userInfoEdit",
+    "pages/adoptList/adoptList",
+    "pages/diaryManage/diaryManage",
+    "pages/myPets/myPets"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "铲屎官",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": false
   },
   "tabBar": {
+    "custom": true,
     "borderStyle": "white",
-    "selectedColor": "#000000",
-    "color": "#9c9c9c",
+    "selectedColor": "#9147FF",
+    "color": "#828088",
     "backgroundColor": "#ffffff",
     "list": [{
         "pagePath": "pages/index/index",
@@ -26,14 +42,26 @@
         "selectedIconPath": "/image/indexSel.png"
       },
       {
-        "pagePath": "pages/adopt/adopt",
-        "text": "领养",
-        "iconPath": "/image/adopt.png",
-        "selectedIconPath": "/image/adoptSel.png"
+        "pagePath": "pages/diary/diary",
+        "text": "日记",
+        "iconPath": "/image/diary.png",
+        "selectedIconPath": "/image/diarySel.png"
+      },
+      {
+        "pagePath": "pages/pets/pets",
+        "text": "宠物",
+        "iconPath": "/image/petsSel.png",
+        "selectedIconPath": "/image/petsSel.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "消息",
+        "iconPath": "/image/news.png",
+        "selectedIconPath": "/image/newsSel.png"
       },
       {
         "pagePath": "pages/my/my",
-        "text": "我的",
+        "text": "我",
         "iconPath": "/image/my.png",
         "selectedIconPath": "/image/mySel.png"
       }

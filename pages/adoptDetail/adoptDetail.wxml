@@ -1,0 +1,218 @@
+<view class="adopt-detail">
+  <!-- 顶部导航 -->
+  <navbar type="1" title="待领养动物"></navbar>
+
+  <!-- 轮播 -->
+  <swiper indicator-dots="true" autoplay="true" indicator-color="#fff" indicator-active-color="#904eff">
+    <block wx:for="{{swiper}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" mode="aspectFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 内容 -->
+  <view class="content">
+    <!-- 信息 -->
+    <view class="info">
+      <view class="title">朝阳首图附近，英短美短串等待有缘人</view>
+      <view class="money">免费领养</view>
+      <view class="address">
+        <view class="img">
+          <image src="/image/address2.png" mode="aspectFill"></image>
+        </view>
+        <view class="agien">
+          江苏 南京
+        </view>
+        <view class="time">
+          发布于 10-31
+        </view>
+      </view>
+    </view>
+
+    <view class="tag">宠物信息</view>
+
+    <!-- 宠物信息 -->
+    <view class="pet">
+      <view class="detail">
+        <view class="img">
+          <image src="/image/defaultHeader.png" mode="aspectFill"></image>
+        </view>
+        <view class="center">
+          <view class="name">煤酱</view>
+          <view class="num">
+            <view>88 宠粉</view>
+            <view>88 日记</view>
+          </view>
+        </view>
+        <view class="img2">
+          <image src="/image/right2.png" mode="aspectFill"></image>
+        </view>
+      </view>
+      <view class="data">
+        <view class="item">
+          <view class="line">
+            <view>Pid</view>
+            <view>ct6546</view>
+          </view>
+          <view class="line">
+            <view>疫苗</view>
+            <view>已免疫</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="line">
+            <view>性别</view>
+            <view>母</view>
+          </view>
+          <view class="line">
+            <view>驱虫</view>
+            <view>未驱虫</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="line">
+            <view>品种</view>暹罗猫<view></view>
+          </view>
+          <view class="line">
+            <view>绝育</view>
+            <view>未绝育</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="line">
+            <view>宠龄</view>
+            <view>2.6岁</view>
+          </view>
+          <view class="line">
+            <view>体型</view>
+            <view>中型</view>
+          </view>
+        </view>
+        <view class="item">
+          <view class="line">
+            <view>状态</view>
+            <view>健康</view>
+          </view>
+          <view class="line">
+            <view>毛量</view>
+            <view>短毛</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="tag">领养要求</view>
+
+    <!-- 要求 -->
+    <view class="need">
+      <view class="item">
+        <view class="img">
+          <image src="/image/need1Sel.png" mode="aspectFill"></image>
+        </view>
+        <view style="color: #1D2238">仅限同城</view>
+      </view>
+      <view class="item">
+        <view class="img">
+          <image src="/image/need2.png" mode="aspectFill"></image>
+        </view>
+        <view>自有住房</view>
+      </view>
+      <view class="item">
+        <view class="img">
+          <image src="/image/need3Sel.png" mode="aspectFill"></image>
+        </view>
+        <view style="color: #1D2238">窗户封闭</view>
+      </view>
+      <view class="item">
+        <view class="img">
+          <image src="/image/need4.png" mode="aspectFill"></image>
+        </view>
+        <view>按时疫苗</view>
+      </view>
+    </view>
+    <view class="need need2">
+      <view class="item">
+        <view class="img">
+          <image src="/image/need5Sel.png" mode="aspectFill"></image>
+        </view>
+        <view style="color: #1D2238">适龄绝育</view>
+      </view>
+      <view class="item">
+        <view class="img">
+          <image src="/image/need6.png" mode="aspectFill"></image>
+        </view>
+        <view>允许回访</view>
+      </view>
+      <view class="item">
+        <view class="img">
+          <image src="/image/need7.png" mode="aspectFill"></image>
+        </view>
+        <view>日记打卡</view>
+      </view>
+      <view class="item">
+        <view class="img">
+          <image src="/image/need8Sel.png" mode="aspectFill"></image>
+        </view>
+        <view style="color: #1D2238">领养协议</view>
+      </view>
+    </view>
+
+    <!-- 运送方式 -->
+    <view class="transport">
+      <view>运送方式</view>
+      <view class="mode">同城 [送养人送宠上门]</view>
+    </view>
+
+    <view class="tag">铲屎官说</view>
+
+    <!-- 主人  -->
+    <view class="master">
+      <view class="info">
+        <view class="img">
+          <image src="/image/defaultHeader.png" mode="aspectFill"></image>
+        </view>
+        <view class="center">
+          <view>骄傲的铲屎官</view>
+          <view class="memo">这个人没写任何签名</view>
+        </view>
+        <view class="follow">+ 关注</view>
+      </view>
+      <view class="word">
+        <view class="img">
+          <image src="/image/talk.jpg" mode="aspectFill"></image>
+        </view>
+        <view class="text">给猫猫找个新主人~大桔是我四月份在小区捡的猫，去做 了体检，医生说她很健康，有七个月大啦。</view>
+      </view>
+    </view>
+
+    <view class="tag">领养流程</view>
+  </view>
+
+  <!-- 流程图 -->
+  <view class="order">
+    <image src="/image/adoptOrder.png" mode="widthFix"></image>
+  </view>
+</view>
+
+<!-- 底部 -->
+<view class="footer" style="height:{{iphoneFooter ? 165 : 126}}rpx">
+  <view class="content">
+    <view class="share">
+      <view class="img">
+        <image src="/image/wx2.png" mode="aspectFill"></image>
+      </view>
+      <view>分享</view>
+    </view>
+    <view class="r">
+      <!--
+      <view class="btn1">撤销</view>
+      <view class="btn1">修改</view>
+      <view class="btn2">申请人</view>
+      -->
+      <view class="btn1">私信</view>
+      <view class="btn3">申请领养</view>
+    </view>
+  </view>
+</view>
+<view style="height:{{iphoneFooter ? 165 : 126}}rpx"></view>

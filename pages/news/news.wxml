@@ -1,0 +1,86 @@
+<!-- 工具 -->
+<wxs src="../../utils/index.wxs" module="util"></wxs>
+
+<view class="news">
+  <!-- 顶部导航 -->
+  <navbar type="1" title="消息" capsuleShow="0"></navbar>
+
+  <!-- Tab -->
+  <view class="tab">
+    <view class="item {{tabIndex == index ? 'checkout' : ''}}" wx:for="{{tab}}" wx:key="index" bindtap="checkoutTab"
+      data-index="{{index}}">
+      <view class="img" wx:if="{{item.num}}">
+        <image src="/image/dot.png"></image>
+      </view>
+      {{item.title}}
+    </view>
+  </view>
+
+  <!-- 列表 -->
+  <view class="list" wx:if="{{tabIndex==0}}">
+    <!-- 私信 -->
+    <view class="item" wx:for="{{list}}" wx:key="index">
+      <view class="img">
+        <image src="{{item.img ? item.img : '/image/defaultHeader.png'}}" mode="aspectFill"></image>
+      </view>
+      <view class="center">
+        <view class="title">{{item.name}}</view>
+        <view class="content">{{util.strHid(item.content, 13)}}</view>
+      </view>
+      <view class="r">
+        <view class="time">{{item.time}}</view>
+        <view class="num">{{item.num}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 评论 -->
+  <view class="list1" wx:if="{{tabIndex==1}}">
+    <view class="item" wx:for="{{list}}" wx:key="index">
+      <view class="img">
+        <image src="{{item.img ? item.img : '/image/defaultHeader.png'}}" mode="aspectFill"></image>
+      </view>
+      <view class="center">
+        <view class="title"><span>洋流君</span>{{util.strHid('评论了我的日记', 12)}}</view>
+        <view class="content">
+          {{util.strHid('每获得两个片贝壳就需要牺牲一个生命， 你在乎过他们的生命？，你不在乎啊啊谁都是谁打啊', 30)}}
+        </view>
+        <view class="time">刚刚</view>
+      </view>
+      <view class="r">
+        <view>
+          <image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=174079424,330439059&fm=26&gp=0.jpg"
+            mode="aspectFill"></image>
+        </view>
+        <!--<view>{{util.strHid('每获得两个 片贝壳就需 要牺牲啊啊谁是谁啊的时代', 12)}}</view> -->
+      </view>
+    </view>
+  </view>
+
+  <!-- 云吸和赞 -->
+  <view class="list1" wx:if="{{tabIndex==2}}">
+    <view class="item" wx:for="{{list}}" wx:key="index">
+      <view class="img">
+        <image src="{{item.img ? item.img : '/image/defaultHeader.png'}}" mode="aspectFill"></image>
+      </view>
+      <view class="center">
+        <view class="title"><span>洋流君</span>{{util.strHid('云吸了我的日记', 12)}}</view>
+        <view class="content"></view>
+        <view class="time">刚刚</view>
+      </view>
+      <view class="r">
+        <view>
+          <image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=174079424,330439059&fm=26&gp=0.jpg"
+            mode="aspectFill"></image>
+        </view>
+        <!--<view>{{util.strHid('每获得两个 片贝壳就需 要牺牲啊啊谁是谁啊的时代', 12)}}</view> -->
+      </view>
+    </view>
+  </view>
+
+  <!-- 系统通知 -->
+</view>
+
+
+<!-- 底部导航 -->
+<tabbar></tabbar>

@@ -1,43 +1,69 @@
-<wxs src="../../utils/index.wxs" module="util" />
+<view class="index">
+  <!-- 顶部导航 -->
+  <navbar type="2" bgColor="#752df4" color="#fff"></navbar>
 
-<view class="container">
-	<view>
-		<view class="list" wx:for="{{list}}" wx:key wx:if="{{index%2 == 0}}"
-		bindtap="toDetail"  data-videoid="{{item.petDiaryDto.videoId}}" data-id="{{item.petDiaryDto.id}}">
-			<image class="viedo-icon" wx:if="{{item.petDiaryDto.videoId}}" src="/image/video.png"></image>
-				<image class="img {{item.petDiaryDto.videoId ? 'img-h' : ''}}" 
-				src="{{util.oneImg(item.petDiaryDto.mediaUrl)}}" 
-				mode="{{item.petDiaryDto.videoId ? 'aspectFill' : 'widthFix'}}"></image>
-			<view class="about">
-				<view class="title">{{item.petDiaryDto.title}}</view>
-				<view class="about-bottom">
-					<image class="header" src="{{item.petDiaryDto.petImg}}">
-					</image>
-					<view class="name">{{util.strHid(item.petDiaryDto.petName)}}</view>
-					<view class="num">{{loadNum[item.petDiaryDto.id]}}</view>
-					<image class="absorb" src="/image/eye.png"></image>
-				</view>
-			</view>
-		</view>
-	</view>
+  <!-- 模式 -->
+  <view class="pattern">
+    <view class="item" wx:for="{{pattern}}" wx:key="index" bindtap="patternCheckout" data-index="{{index}}">
+      <view class="img">
+        <image src="{{patternIndex == index ? item.selectIcon : item.icon}}" mode="aspectFill"></image>
+      </view>
+      <view style="color:{{patternIndex == index ? '#fff' : ''}}">{{item.title}}</view>
+      <view class="img2">
+        <image wx:if="{{patternIndex == index}}" src="/image/tabIndex.png" mode="aspectFill"></image>
+      </view>
+    </view>
+  </view>
 
-	<view>
-		<view class="list" wx:for="{{list}}" wx:key wx:if="{{index%2 == 1}}"
-		bindtap="toDetail"  data-videoid="{{item.petDiaryDto.videoId}}" data-id="{{item.petDiaryDto.id}}">
-			<image class="viedo-icon" wx:if="{{item.petDiaryDto.videoId}}" src="/image/video.png"></image>
-				<image class="img {{item.petDiaryDto.videoId ? 'img-h' : ''}}" 
-				src="{{util.oneImg(item.petDiaryDto.mediaUrl)}}" 
-				mode="{{item.petDiaryDto.videoId ? 'aspectFill' : 'widthFix'}}"></image>
-			<view class="about">
-				<view class="title">{{item.petDiaryDto.title}}</view>
-				<view class="about-bottom">
-					<image class="header" src="{{item.petDiaryDto.petImg}}">
-					</image>
-					<view class="name">{{item.petDiaryDto.petName}}</view>
-					<view class="num">{{loadNum[item.petDiaryDto.id]}}</view>
-					<image class="absorb" src="/image/eye.png"></image>
-				</view>
-			</view>
-		</view>
-	</view>
+  <!-- 筛选 -->
+  <view class="screen">
+    <view class="l">
+      <view wx:for="{{tag}}" wx:key="index" bindtap="tagCheckout" data-index="{{index}}"
+        class="{{tagIndex == index ? 'checkout' : ''}}">{{item}}</view>
+    </view>
+    <view class="r">
+      <view class="img">
+        <image src="/image/lamp.png" mode="aspectFill"></image>
+      </view>
+      <view>领养曝光台</view>
+    </view>
+  </view>
+
+  <!-- 列表 -->
+  <view class="list">
+    <view class="item" wx:for="{{list}}" wx:key="index">
+      <view class="img">
+        <image src="{{item.img}}" mode="aspectFill"></image>
+      </view>
+      <view class="r">
+        <view class="title">{{item.title}}</view>
+        <view class="sex">
+          <view>
+            <view class="img">
+              <image src="{{item.sex == 1 ? '/image/sex1.png' : '/image/sex2.png'}}" mode="aspectFill"></image>
+            </view>
+          </view>
+          <view>{{item.breed}}</view>
+          <view>{{item.age}}</view>
+        </view>
+        <view class="apply" wx:if="{{item.applyNum > 0}}">已有{{item.applyNum}}人申请领养</view>
+        <view class="apply" wx:else>无人申请领养</view>
+        <view class="money">¥<span>{{item.money}}</span> <span>{{item.moneyType}}</span></view>
+        <view class="name">
+          <view>{{item.name}} · {{item.time}}</view>
+          <view>{{item.distance}}km</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 创建 -->
+  <view class="create">
+    <view class="img">
+      <image src="/image/create.png" mode="aspectFill"></image>
+    </view>
+  </view>
 </view>
+
+<!-- 底部导航 -->
+<tabbar></tabbar>

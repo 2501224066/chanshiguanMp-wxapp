@@ -1,0 +1,36 @@
+<!-- 工具 -->
+<wxs src="../../utils/index.wxs" module="util"></wxs>
+
+<view catchanimationend="applicant">
+  <!-- 顶部导航 -->
+  <navbar type="1"></navbar>
+
+  <!-- 列表 -->
+  <view class="list">
+    <view class="item" wx:for="{{list}}" wx:key="index">
+      <view class="img">
+        <image class="{{item.status ? '' : 'gray'}}" src="{{item.header ? item.header : '/image/defaultHeader.png'}}" mode="aspectFill"></image>
+        <image wx:if="{{!item.status}}" src="/image/out.png" mode="aspectFill"></image>
+      </view>
+      <view class="center">
+        <view class="top">
+          <view class="name">{{item.name}}</view>
+          <view class="img">
+            <image wx:if="{{item.sex == 1}}" src="/image/peopleSex1.png" mode="aspectFill"></image>
+            <image wx:if="{{item.sex == 2}}" src="/image/peopleSex2.png" mode="aspectFill"></image>
+          </view>
+        </view>
+        <view class="down">
+          <view class="time">{{item.time}}前申请</view>
+          <view>{{util.strHid(item.word, 13)}}</view>
+        </view>
+      </view>
+      <view class="r">
+        <view>详情</view>
+        <view class="img">
+          <image src="/image/right.png" mode="aspectFill"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

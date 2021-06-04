@@ -1,0 +1,93 @@
+page {
+  background: #f3f3f3;
+}
+
+.applicant {
+  padding-bottom: 10vh;
+}
+
+.list {
+  margin-top: 20rpx;
+}
+
+.list>.item {
+  background: #fff;
+  padding: 22rpx 25rpx;
+  margin-bottom: 7rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list>.item>.img {
+  width: 147rpx;
+  height: 147rpx;
+  border-radius: 74rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+.list>.item>.img>image {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.list>.item>.img>.gray {
+  filter: grayscale(100%);
+}
+
+.list>.item>.center {
+  flex: 1;
+  height: 147rpx;
+  margin: 0 24rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.list>.item>.center>.top {
+  display: flex;
+  align-items: center;
+}
+
+.list>.item>.center>.top>.name {
+  font-size: 32rpx;
+}
+
+.list>.item>.center>.top>.img {
+  width: 37rpx;
+  height: 37rpx;
+  margin-left: 25rpx;
+}
+
+.list>.item>.center>.down {
+  font-size: 28rpx;
+  color: #939393;
+}
+
+.list>.item>.center>.down>.time {
+  color: #D8B24B;
+  font-size: 24rpx;
+  margin-bottom: 10rpx;
+}
+
+.list>.item>.r {
+  width: 103rpx;
+  height: 50rpx;
+  background: #f3f3f3;
+  color: #A3A3A3;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25rpx;
+}
+
+.list>.item>.r>.img {
+  width: 12rpx;
+  height: 21rpx;
+  line-height: 0;
+  margin-left: 10rpx;
+}

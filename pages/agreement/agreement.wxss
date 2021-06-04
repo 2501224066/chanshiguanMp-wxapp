@@ -1,0 +1,9 @@
+.agreement{
+  padding-bottom: 10vh;
+}
+
+.content{
+  border-top: 11rpx solid #F5F5F5;
+  font-size: 28rpx;
+  padding: 0 56rpx;
+}

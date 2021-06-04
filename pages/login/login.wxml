@@ -1,5 +1,60 @@
-<view class="logo">
-  <image src="../../image/logo.png"></image>
+<view class="login">
+  <!-- 顶部导航 -->
+  <navbar type="1" title="登陆铲屎官"></navbar>
+
+  <view class="content">
+    <view class="title">
+      欢迎加入铲屎官
+    </view>
+
+    <!-- 手机号 -->
+    <view class="ipt">
+      <view class="l">
+        <picker bindchange="checkoutPhonePrefix" value="{{phonePrefixIndex}}" range="{{phonePrefix}}">
+          <view class="sel">
+            <view class="picker">
+              {{phonePrefix[phonePrefixIndex]}}
+            </view>
+            <view class="img">
+              <image src="/image/down2.png" mode="aspectFill"></image>
+            </view>
+          </view>
+        </picker>
+      </view>
+      <view class="c">
+        <input type="number" placeholder-class="placeholder" placeholder="输入手机号" maxlength="11"/>
+      </view>
+    </view>
+
+    <!-- 验证码 -->
+    <view class="ipt">
+      <view class="c">
+        <input type="number" placeholder-class="placeholder" placeholder="输入验证码" maxlength="6"/>
+      </view>
+      <view class="r">发送验证码</view>
+    </view>
+
+    <!-- 手机登陆  -->
+    <view class="phone">
+      <view class="box">
+        <view class="img">
+          <image src="/image/phone.png" mode="aspectFill"></image>
+        </view>
+        <view>手机验证码登录</view>
+      </view>
+    </view>
+
+    <!-- 微信登陆 -->
+    <button class="wx" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+      <view class="box">
+        <view class="img">
+          <image src="/image/wx.png" mode="aspectFill"></image>
+        </view>
+        <view>微信号快速登录</view>
+      </view>
+    </button>
+  </view>
 </view>
-<button class="wx-login" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信一键登录</button>
-<button class="zp-login" bindtap="toIndex">返回首页</button>
+
+<!-- 协议 -->
+<view class="agree" style="bottom: {{iphoneFooter ? 88 : 50}}rpx">登录即表示你同意<span bindtap="to" data-url="/pages/agreement/agreement?index=0">《用户服务协议》</span>和<span  bindtap="to" data-url="/pages/agreement/agreement?index=1">《隐私政策》</span></view>

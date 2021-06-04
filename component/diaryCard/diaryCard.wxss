@@ -1,0 +1,64 @@
+.diary-card {
+  position: relative;
+}
+
+.video {
+  position: absolute;
+  right: 19rpx;
+  top: 23rpx;
+  width: 41rpx;
+  height: 41rpx;
+}
+
+.item>.img {
+  width: 100%;
+  font-size: 0;
+}
+
+.item>.content {
+  background: #fff;
+  padding: 16rpx;
+}
+
+.item>.content>.title {
+  font-size: 27rpx;
+  margin-bottom: 20rpx;
+}
+
+.item>.content>.name {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 300;
+}
+
+.item>.content>.name>.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 23rpx;
+  color: #595959;
+}
+
+.item>.content>.name>.item:nth-child(1) {
+  flex: 1;
+}
+
+.item>.content>.name>.item>.img {
+  width: 31rpx;
+  height: 31rpx;
+  margin-right: 13rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+
+.item>.content>.name>.item>.img2 {
+  width: 33rpx;
+  height: 27rpx;
+  margin-right: 13rpx;
+}
+
+.item>.content>.name>.item>.img3 {
+  width: 24rpx;
+  height: 24rpx;
+}

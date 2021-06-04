@@ -1,0 +1,89 @@
+<view class="self-space">
+  <!-- 顶部导航 -->
+  <navbar type="1" capsuleShow="1" bgColor="rgba(250,250,250,0)"></navbar>
+
+  <!-- 彩色背景 -->
+  <view class="bg">
+    <image src="/image/bg.png" mode="aspectFill"></image>
+  </view>
+
+  <view class="box">
+    <!-- 头像 -->
+    <view class="header">
+      <image src="/image/defaultHeader.png" mode="aspectFill"></image>
+    </view>
+    <!-- 关注 -->
+    <view class="follow">
+      <view class="text">+ 关注</view>
+      <view class="img">
+        <image src="/image/chat.png" mode="" aspectFill></image>
+      </view>
+      <!-- <view class="text">编辑资料</view>  -->
+    </view>
+    <!-- 名称 -->
+    <view class="name">
+      <view>天上真的有仙女吗</view>
+      <view class="img">
+        <image src="/image/man.png" mode="aspectFill"></image>
+      </view>
+    </view>
+    <!-- 签名 -->
+    <view class="memo">这个铲屎官很懒，还没有写签名...</view>
+    <!-- 数据 -->
+    <view class="count">
+      <view class="item">
+        <view class="num">12</view>
+        <view>关注</view>
+      </view>
+      <view class="item">
+        <view class="num">41</view>
+        <view>粉丝</view>
+      </view>
+      <view class="item">
+        <view class="num">23</view>
+        <view>吸宠</view>
+      </view>
+      <view class="item">
+        <view class="num">98</view>
+        <view>动态</view>
+      </view>
+    </view>
+    <!-- tab -->
+    <view class="tab">
+      <view class="{{index == tabIndex ? 'sel' : ''}}" wx:for="{{tab}}" wx:key="index" bindtap="checkoutTab"
+        data-index="{{index}}">
+        {{item}}
+      </view>
+    </view>
+    <!-- 动态 -->
+    <view class="dynamic" wx:if="{{tabIndex == 0}}">
+      <view class="item" wx:for="{{3}}">
+        <view class="people">
+          <view class="img">
+            <image src="/image/defaultHeader.png" mode="aspectFill"></image>
+          </view>
+          <view class="center">
+            <view class="name">天上真的有仙女吗</view>
+            <view>1小时前</view>
+          </view>
+          <view class="title">添加了宠物</view>
+        </view>
+        <view class="pets">
+          <view class="card">
+            <view class="img">
+              <image src="/image/defaultHeader.png" mode="aspectFill"></image>
+            </view>
+            <view>瓜皮大侠</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 宠物 -->
+  <view class="pet" wx:if="{{tabIndex == 1}}">
+    <view class="item" wx:for="{{6}}">
+      <petsCard></petsCard>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<view class="pets-card">
+  <view class="img">
+    <image src="/image/defaultHeader.png"></image>
+  </view>
+  <view class="center">
+    <view class="name">飞机去哪里了</view>
+    <view class="info">
+      <view class="sex">
+        <view class="img">
+          <image src="/image/sex1.png" mode="aspectFill"></image>
+        </view>
+      </view>
+      <view class="breed">布偶猫</view>
+      <view class="age">6岁</view>
+    </view>
+    <view class="memo">宠物的铭牌签名...</view>
+  </view>
+  <view class="r">
+    <image src="/image/right2.png"></image>
+  </view>
+</view>

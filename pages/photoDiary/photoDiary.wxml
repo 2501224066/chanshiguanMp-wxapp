@@ -1,0 +1,142 @@
+<view class="photo-diary">
+  <!-- 顶部导航 -->
+  <navbar type="1" capsuleShow="1"></navbar>
+
+  <!-- 轮播 -->
+  <swiper autoplay="true" bindchange="swiperTrans" current="{{swiperIndex}}">
+    <block wx:for="{{swiper}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" mode="aspectFill" bindtap="previewImg"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 图片列表 -->
+  <view class="photo">
+    <view class="img {{swiperIndex == index ? 'sel' : ''}}" wx:for="{{swiper}}" wx:key="index" bindtap="checkoutImg"
+      data-index="{{index}}">
+      <image src="{{item}}" mode="aspectFill"></image>
+    </view>
+  </view>
+
+  <view class="box">
+    <!-- 信息 -->
+    <view class="info">
+      <view class="img">
+        <image src="/image/defaultHeader.png" mode="aspectFill"></image>
+      </view>
+      <view class="title">小叮当</view>
+      <view class="follow">＋吸宠</view>
+    </view>
+
+    <!-- 标题 -->
+    <view class="title">小猫咪挑食怎么办呀？喂羊奶粉管用吗？</view>
+
+    <!-- 内容 -->
+    <view class="content">
+      挑食不爱吃猫粮，最近又张猫藓了 估计是营养不太够，这个买什么羊奶粉喂会不会营 养足一点啊？还是买猫饭？ 天天喂罐头喂不起了
+    </view>
+
+    <!-- 发布时间 -->
+    <view class="time">4小时前</view>
+
+    <!-- 评论框 -->
+    <view class="input">
+      <view class="img">
+        <image src="/image/defaultHeader.png"></image>
+      </view>
+      <view class="ipt">吸宠不要钱，请留下评论哦~</view>
+    </view>
+
+    <!-- 评论数量类型 -->
+    <view class="comment">
+      <view class="title">共380条评论 </view>
+      <view class="type">
+        <view class="{{commentTypeIndex == index ? 'sel' : ''}}" wx:for="{{commentType}}" wx:key="index"
+          bindtap="checkoutComentType" data-index="{{index}}">{{item}}</view>
+      </view>
+    </view>
+
+    <!-- 评论 -->
+    <view class="people" wx:for="{{comment}}" wx:key="index">
+      <view class="header">
+        <image src="{{item.header ? item.header : '/image/defaultHeader.png'}}" mode="aspectFill"></image>
+      </view>
+      <view class="r">
+        <view class="info">
+          <view class="center">
+            <view class="name">{{item.name}}</view>
+            <view>{{item.time}}</view>
+          </view>
+          <view class="like">
+            <view class="img">
+              <image src="/image/likeSel.png" mode="aspectFill"></image>
+            </view>
+            <view wx:if="{{item.like > 0}}" class="num sel">{{item.like}}</view>
+          </view>
+        </view>
+        <view class="content">{{item.content}}</view>
+
+        <!-- 第二层 -->
+        <view class="people" wx:for="{{item.children}}" wx:key="index" wx:for-item="value" wx:for-index="key"
+          wx:if="{{key < 1}}">
+          <view class="header" style="width:48rpx;height:48rpx">
+            <image src="{{value.header ? value.header : '/image/defaultHeader.png'}}" mode="aspectFill"></image>
+          </view>
+          <view class="r">
+            <view class="info">
+              <view class="center">
+                <view class="name">{{value.name}}</view>
+                <view>{{value.time}}</view>
+              </view>
+              <view class="like">
+                <view class="img">
+                  <image src="/image/likeSel.png" mode="aspectFill"></image>
+                </view>
+                <view wx:if="{{value.like > 0}}" class="num sel">{{value.like}}</view>
+              </view>
+            </view>
+            <view class="content">{{value.content}}</view>
+            <view class="more">展开 {{item.children.length - 1}} 条回复</view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+  <!-- 提示 -->
+  <view class="tips">已经到底了哦~</view>
+</view>
+
+<!-- 底部 -->
+<view class="footer" style="height:{{iphoneFooter ? 158 : 120}}rpx">
+  <view class="content">
+    <view class="item">
+      <view class="img">
+        <image src="/image/xi2.png" mode="heightFix"></image>
+      </view>
+      <view>云吸</view>
+    </view>
+    <view class="item">
+      <view class="img">
+        <image src="/image/follow.png" mode="heightFix"></image>
+      </view>
+      <view>收藏</view>
+    </view>
+    <view class="item">
+      <view class="img">
+        <image src="/image/comment.png" mode="heightFix"></image>
+      </view>
+      <view>评论</view>
+    </view>
+    <view class="item">
+      <view class="img">
+        <image src="/image/wx2.png" mode="heightFix"></image>
+      </view>
+      <view style="color:#71BA4E">分享</view>
+    </view>
+
+  </view>
+</view>
+<view style="height:{{iphoneFooter ? 158 : 120}}rpx"></view>

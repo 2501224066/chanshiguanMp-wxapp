@@ -1,0 +1,43 @@
+<view class="navbar" style="height:{{navHeight}}px; padding-top:{{navTop}}px; background:{{bgColor}}; color:{{color}};">
+  <view class="content">
+    <!-- 纯标题 -->
+    <view class="title" wx:if="{{type == 1}}">
+      <view class="edge">
+        <view class="capsule" wx:if="{{capsuleShow}}">
+          <view class="img" bindtap="back">
+            <image src="/image/back.png" mode="aspectFill"></image>
+          </view>
+          <view class="erect"></view>
+          <view class="img" bindtap="toIndex">
+            <image src="/image/backHome.png" mode="aspectFill"></image>
+          </view>
+        </view>
+      </view>
+      <view class="text">
+        <view class="title">{{title}}</view>
+        <view class="pid" wx:if="{{pid != ''}}">Pid：{{pid}}</view>
+      </view>
+      <view class="edge"></view>
+    </view>
+
+    <!-- 位置选择 -->
+    <view class="region" wx:if="{{type == 2}}">
+      <view class="img">
+        <image src="/image/address.png" mode="aspectFill"></image>
+      </view>
+      <view>{{region}}</view>
+      <view class="img2">
+        <image src="/image/down.png" mode="aspectFill"></image>
+      </view>
+    </view>
+
+    <!-- 跳转标题 -->
+    <view class="dump" wx:if="{{type == 3}}">
+      <view class="img" bindtap="to" data-url="{{url}}">
+        <image src="{{img}}" mode="aspectFill"></image>
+      </view>
+      <view>{{title}}</view>
+    </view>
+  </view>
+</view>
+<view style="height:{{navHeight}}px"></view>

@@ -1,0 +1,147 @@
+.apply-adopt{
+  padding-bottom: 10vh;
+}
+
+.box {
+  padding: 0 38rpx;
+  border-top: 1rpx solid #ececec;
+}
+
+.box>.pet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36rpx 0;
+}
+
+.box>.pet>.l {
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+}
+
+.box>.pet>.l>.img {
+  width: 33rpx;
+  height: 33rpx;
+  margin-right: 23rpx;
+  line-height: 0;
+}
+
+.box>.pet>.r {
+  font-size: 27rpx;
+  display: flex;
+  align-items: center;
+}
+
+
+.box>.pet>.r>.img {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 25rpx;
+  overflow: hidden;
+  margin-right: 17rpx;
+}
+
+.box>.status {
+  padding: 25rpx 0;
+}
+
+.box>.status>.item {
+  padding: 25rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box>.status>.item>.l {
+  font-size: 28rpx;
+  min-width: 120rpx;
+}
+
+.box>.status>.item>.r {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box>.status>.item>.r>.tag {
+  margin-left: 37rpx;
+  height: 63rpx;
+  line-height: 63rpx;
+  border-radius: 32rpx;
+  background: #f6f6f6;
+  font-size: 28rpx;
+  padding: 0 20rpx;
+  color: #5A5A5A;
+}
+
+.box>.status>.item>.r>.sel {
+  color: #9147FF;
+  background: #eee4fb;
+}
+
+.box>.ipt {
+  padding: 30rpx 0;
+  font-size: 32rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box>.ipt>.l {
+  display: flex;
+  align-items: center;
+}
+
+.box>.ipt>.full {
+  width: 100%;
+}
+
+.box>.ipt>.l>.img {
+  width: 33rpx;
+  height: 33rpx;
+  margin-right: 23rpx;
+}
+
+.box>.ipt>.r {
+  flex: 1;
+  text-align: right;
+}
+
+.box>.ipt>.text {
+  margin-top: 50rpx;
+  text-align: left;
+}
+
+.box>.ipt>.text>textarea {
+  width: 674rpx;
+  height: 200rpx;
+}
+
+.box>.ipt>.r .placeholder {
+  color: #BFBFBF;
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 99999;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.footer>.content {
+  width: 633rpx;
+  margin: auto;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #8434e9;
+  color: #fff;
+  border-radius: 40rpx;
+}

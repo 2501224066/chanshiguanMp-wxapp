@@ -1,0 +1,132 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "日记",
+          "pathName": "pages/diary/diary",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "宠物",
+          "pathName": "pages/pets/pets",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "消息",
+          "pathName": "pages/news/news",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "宠物第三方视角",
+          "pathName": "pages/petShow/petShow",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "登陆",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "协议",
+          "pathName": "pages/agreement/agreement",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "领养详情",
+          "pathName": "pages/adoptDetail/adoptDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "申请人",
+          "pathName": "pages/applicant/applicant",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "申请领养",
+          "pathName": "pages/applyAdopt/applyAdopt",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发布领养",
+          "pathName": "pages/releaseAdopt/releaseAdopt",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "图片日记",
+          "pathName": "pages/photoDiary/photoDiary",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的收藏",
+          "pathName": "pages/collect/collect",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的草稿",
+          "pathName": "pages/draft/draft",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人空间",
+          "pathName": "pages/selfSpace/selfSpace",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "用户资料修改",
+          "pathName": "pages/userInfoEdit/userInfoEdit",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "宠物领养",
+          "pathName": "pages/adoptList/adoptList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "日记管理",
+          "pathName": "pages/diaryManage/diaryManage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的宠物",
+          "pathName": "pages/myPets/myPets",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

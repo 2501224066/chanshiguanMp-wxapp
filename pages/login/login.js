@@ -1,53 +1,29 @@
-import {
-  wxLogin
-} from '../../config/api'
+const App = getApp();
 
 Page({
   data: {
-    code: ''
+    phonePrefixIndex: 0,
+    iphoneFooter: false,
+    phonePrefix: ['+86', '+852', '+853', '+886', '+82', '+81', '+1', '+44']
   },
 
-  onLoad() {
-    let that = this
-    wx.login({
-      success: function (res) {
-        that.setData({
-          code: res.code
-        })
-      }
+  onShow() {
+    this.setData({
+      iphoneFooter: App.globalData.iphoneFooter,
     })
   },
 
-  // 授权登陆
-  getPhoneNumber(e) {
-    let obj = {
-      code: this.data.code,
-      encryptedData: e.detail.encryptedData,
-      iv: e.detail.iv
-    }
-    wxLogin(obj).then(res=>{
-      wx.setStorageSync('token', res.data.token)
-      wx.setStorageSync('loginStatus', true)
-      wx.setStorageSync('userInfo', {
-        nickname: res.data.nickname,
-        avatar: res.data.avatar
-      })
+  // 却换手机号前缀
+  checkoutPhonePrefix(e) {
+    this.setData({
+      phonePrefixIndex: e.detail.value
     })
-    if (!wx.getStorageSync('authStatus')) {
-      wx.navigateTo({
-        url: '/pages/auth/auth',
-      })
-    } else {
-      wx.switchTab({
-        url: '/pages/index/index',
-      })
-    }
   },
 
-  // 返回首页
-  toIndex(){
-    wx.switchTab({
-      url: '/pages/index/index',
+  // 跳转
+  to(e) {
+    wx.navigateTo({
+      url: e.currentTarget.dataset.url
     })
   }
 })

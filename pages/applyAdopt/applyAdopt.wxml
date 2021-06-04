@@ -1,0 +1,126 @@
+<view class="apply-adopt">
+  <!-- 顶部导航 -->
+  <navbar type="1"></navbar>
+
+  <!-- 宠物 -->
+  <view class="box">
+    <view class="pet">
+      <view class="l">
+        <view class="img">
+          <image src="/image/cage.png" mode="aspectFill"></image>
+        </view>
+        <view>领养的宠物</view>
+      </view>
+      <view class="r">
+        <view class="img">
+          <image src="/image/defaultHeader.png" mode="aspectFill"></image>
+        </view>
+        <view>瓜皮</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 状况 -->
+  <view class="box">
+    <view class="status">
+      <view class="item">
+        <view class="l">我的性别</view>
+        <view class="r">
+          <view class="tag sel">女性</view>
+          <view class="tag">男性</view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="l">我的年龄</view>
+        <view class="r">
+          <view class="tag sel">00后</view>
+          <view class="tag">90后</view>
+          <view class="tag">80后</view>
+          <view class="tag">70后</view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="l">居住情况</view>
+        <view class="r">
+          <view class="tag sel">自住</view>
+          <view class="tag">整租</view>
+          <view class="tag">合租</view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="l">婚姻状况</view>
+        <view class="r">
+          <view class="tag sel">单身</view>
+          <view class="tag">恋爱</view>
+          <view class="tag">已婚</view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="l">生活状态</view>
+        <view class="r">
+          <view class="tag sel">学生</view>
+          <view class="tag">工作</view>
+          <view class="tag">自由</view>
+          <view class="tag">退休</view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="l">养宠经验</view>
+        <view class="r">
+          <view class="tag sel">无经验</view>
+          <view class="tag">学习中</view>
+          <view class="tag">经验丰富</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 输入 -->
+  <view class="box">
+    <view class="ipt">
+      <view class="l">
+        <view class="img">
+          <image src="/image/phone2.png" mode="aspectFill"></image>
+        </view>
+        <view>我的手机号码</view>
+      </view>
+      <view class="r">
+        <input type="text" placeholder="输入手机号" placeholder-class="placeholder" />
+      </view>
+    </view>
+  </view>
+  <view class="box">
+    <view class="ipt">
+      <view class="l">
+        <view class="img">
+          <image src="/image/address3.png" mode="aspectFill"></image>
+        </view>
+        <view>我的地址</view>
+      </view>
+      <view class="r">
+        <input type="text" placeholder="请填写你的具体住址" placeholder-class="placeholder" />
+      </view>
+    </view>
+  </view>
+  <view class="box">
+    <view class="ipt">
+      <view class="l full">
+        <view class="img">
+          <image src="/image/notice.png" mode="aspectFill"></image>
+        </view>
+        <view>留言给送养人</view>
+      </view>
+      <view class="r text">
+        <textarea placeholder="你想说点什么..." placeholder-class="placeholder"></textarea>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 底部 -->
+<view class="footer" style="height:{{iphoneFooter ? 158 : 120}}rpx">
+  <view class="content">
+    提交我的资料，申请领养
+  </view>
+</view>
+<view style="height:{{iphoneFooter ? 158 : 120}}rpx"></view>

@@ -1,0 +1,40 @@
+.tabbar {
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1rpx solid #ececec;
+  background: #fff;
+}
+
+.content {
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 14rpx;
+  box-sizing: border-box;
+}
+
+.content>.item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content>.item>.img {
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.content>.item:nth-child(3)>.img{
+  width: 74rpx;
+  height: 74rpx;
+}
+
+.tabbar>.content>.item>.title {
+  font-size: 20rpx;
+}

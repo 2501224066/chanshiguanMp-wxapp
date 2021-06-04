@@ -1,0 +1,156 @@
+page {
+  background: #f3f3f3;
+}
+
+.news {
+  padding-bottom: 10vh;
+}
+
+.tab {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+}
+
+.tab>.item {
+  font-size: 32rpx;
+  color: #828088;
+  margin: 30rpx 0 30rpx 50rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  position: relative;
+}
+
+.tab>.checkout {
+  font-size: 40rpx;
+  color: #2d2d2d;
+}
+
+.tab>.item>.img {
+  position: absolute;
+  top: -27rpx;
+  right: -20rpx;
+  width: 14rpx;
+  height: 14rpx;
+}
+
+.list {
+  border-top: 20rpx solid #f3f3f3;
+}
+
+.list>.item {
+  background: #fff;
+  border-bottom: 1rpx solid #f3f3f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 50rpx;
+}
+
+.list>.item>.img {
+  width: 97rpx;
+  height: 97rpx;
+  border-radius: 49rpx;
+  overflow: hidden;
+}
+
+.list>.item>.center {
+  flex: 1;
+  margin: 0 50rpx;
+}
+
+.list>.item>.center>.title {
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+
+.list>.item>.center>.content {
+  font-size: 28rpx;
+  color: #aaa;
+}
+
+.list>.item>.r {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list>.item>.r>.time {
+  font-size: 24rpx;
+  color: #aaa;
+  margin-bottom: 20rpx;
+}
+
+.list>.item>.r>.num {
+  padding: 0 6rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #fff;
+  background: #ec595b;
+  height: 32rpx;
+  line-height: 32rpx;
+  min-width: 32rpx;
+  text-align: center;
+  border-radius: 16rpx;
+}
+
+.list1 {
+  padding-left: 27rpx;
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.list1>.item {
+  padding: 33rpx 27rpx 33rpx 0;
+  border-bottom: 1rpx solid #ececec;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.list1>.item>.img {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.list1>.item>.center {
+  flex: 1;
+  margin: 0 16rpx;
+  color: #999999;
+  font-size: 24rpx;
+}
+
+.list1>.item>.center>.title {
+  font-size: 27rpx;
+  color: #505050;
+}
+
+.list1>.item>.center>.title>span {
+  font-weight: bold;
+  color: #2b2b2b;
+  margin-right: 10rpx;
+}
+
+.list1>.item>.center>.content {
+  font-size: 27rpx;
+  color: #212121;
+  margin: 20rpx 0;
+}
+
+.list1>.item>.r {
+  margin-left: 50rpx;
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.list1>.item>.r>view {
+  width: 90rpx;
+  height: 90rpx;
+  font-size: 20rpx;
+  color: #505050;
+  overflow: hidden;
+}

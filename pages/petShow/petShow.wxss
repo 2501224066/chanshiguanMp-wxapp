@@ -1,0 +1,242 @@
+page {
+  background: #f3f3f3;
+}
+
+.pets {
+  padding-bottom: 10vh;
+}
+
+.none {
+  width: 492rpx;
+  height: 79rpx;
+  position: relative;
+  margin-left: 27rpx;
+}
+
+.none>.bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.none>.content {
+  padding-top: 10rpx;
+  box-sizing: border-box;
+  color: #D8B24B;
+  font-size: 27rpx;
+  line-height: 69rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.none>.content>.close {
+  width: 21rpx;
+  height: 20rpx;
+  line-height: 0;
+  margin-left: 20rpx;
+}
+
+.none2 {
+  font-size: 30rpx;
+  color: #828088;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.content {
+  background: #fff;
+}
+
+.content>.header {
+  border-top: 1rpx solid #ececec;
+  padding: 40rpx 0;
+  display: flex;
+  justify-content: center;
+}
+
+.content>.header>.img {
+  width: 193rpx;
+  height: 193rpx;
+  border-radius: 97rpx;
+  overflow: hidden;
+}
+
+.content>.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  line-height: 43rpx;
+}
+
+.content>.info>view {
+  margin: 0 10rpx;
+}
+
+.content>.info>.sex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f1eff7;
+  width: 43rpx;
+  height: 43rpx;
+}
+
+.content>.info>.sex>.img {
+  margin: auto;
+  width: 13rpx;
+  height: 21rpx;
+  line-height: 0;
+}
+
+.content>.info>.breed {
+  color: #43CF7C;
+  background: #f4fdf8;
+  padding: 0 10rpx;
+}
+
+.content>.info>.age {
+  background: #fef9f3;
+  color: #FF8D1A;
+  padding: 0 10rpx;
+}
+
+.content>.data {
+  margin: 60rpx 0 40rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content>.data>view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content>.data>view>.num {
+  font-size: 32rpx;
+  font-weight: 900;
+}
+
+.content>.data>view>.tag {
+  margin-top: 10rpx;
+  font-size: 21rpx;
+  color: #98989B;
+}
+
+.content>.data>.line {
+  width: 2rpx;
+  height: 33rpx;
+  border-right: 2rpx solid #ececec;
+  margin: 0 60rpx;
+}
+
+.content>.edit {
+  display: flex;
+  justify-content: center;
+}
+
+.content>.edit>.title {
+  font-size: 24rpx;
+  width: 313rpx;
+  height: 83rpx;
+  line-height: 83rpx;
+  text-align: center;
+  border: 1rpx solid #ececec;
+  margin-right: 7rpx;
+  background: #904eff;
+  color: #fff;
+}
+
+.content>.edit>.master {
+  width: 83rpx;
+  height: 83rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1rpx solid #ececec;
+  margin-right: 7rpx;
+}
+
+.content>.edit>.master>.img {
+  margin: auto;
+  width: 35rpx;
+  height: 35rpx;
+  line-height: 0;
+}
+
+.content>.edit>.share {
+  width: 83rpx;
+  height: 83rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1rpx solid #ececec;
+}
+
+.content>.edit>.share>.img {
+  margin: auto;
+  width: 37rpx;
+  height: 31rpx;
+  line-height: 0;
+}
+
+.content>.brand {
+  padding: 50rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  color: #97989B;
+}
+
+.diary {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5rpx;
+}
+
+.diary>.line {
+  flex: 1;
+}
+
+.diary>.line:nth-child(2){
+  margin: 0 5rpx;
+}
+
+.diary>.line>.item {
+  position: relative;
+  color: #fff;
+  font-size: 23rpx;
+  margin-bottom: 5rpx;
+}
+
+.diary>.line>.item>.img {
+  width: 100%;
+  font-size: 0;
+}
+
+.diary>.line>.item>.num {
+  position: absolute;
+  bottom: 13rpx;
+  left: 15rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.diary>.line>.item>.num>.img{
+  width: 33rpx;
+  height: 27rpx;
+  line-height: 0;
+  margin-right: 10rpx;
+}

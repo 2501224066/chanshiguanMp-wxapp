@@ -1,0 +1,19 @@
+<view class="diary">
+  <!-- 顶部导航 -->
+  <navbar type="3" img="/image/camera.png" title="为你的宠物写日记吧 ~" url="/pages/addDiary/addDiary"></navbar>
+
+  <!-- 列表 -->
+  <view class="list">
+    <!-- 左列 -->
+    <view class="col">
+      <diaryCard detail="{{item}}" wx:for="{{list}}" wx:key="index" wx:if="{{index % 2 == 0}}"></diaryCard>
+    </view>
+    <!-- 右列 -->
+    <view class="col">
+      <diaryCard detail="{{item}}" wx:for="{{list}}" wx:key="index" wx:if="{{index % 2 == 1}}"></diaryCard>
+    </view>
+  </view>
+</view>
+
+<!-- 底部导航 -->
+<tabbar></tabbar>

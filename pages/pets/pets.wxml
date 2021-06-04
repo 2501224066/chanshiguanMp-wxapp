@@ -1,2 +1,137 @@
-<!--pages/pets/pets.wxml-->
-<text>pages/pets/pets.wxml</text>
+<view class="pets">
+  <!-- 顶部导航 -->
+  <navbar wx:if="{{!detail}}" type="3" img="/image/addPet.png" title="添加宠物" url="/pages/addPet/addPet"></navbar>
+  <navbar wx:else type="1" capsuleShow="0" title="{{detail.petName}}" pid="{{detail.pid}}"></navbar>
+
+  <!-- 无数据指示框 -->
+  <view class="none" wx:if="{{noPetShow && !detail}}">
+    <view class="bg">
+      <image src="/image/noPet.png" mode="aspectFill"></image>
+    </view>
+    <view class="content">
+      <view>快来为宠物创建专属的社交帐号吧</view>
+      <view class="close" bindtap="closeNoPet">
+        <image src="/image/close.png" mode="aspectFill"></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- 无数据标语 -->
+  <view class="none2" wx:if="{{!detail}}">
+    <view>你还没有宠物～</view>
+  </view>
+
+  <!-- 宠物 -->
+  <view class="content">
+    <!-- 头像 -->
+    <view class="header">
+      <view class="img">
+        <image src="{{detail.avatar ? detail.avatar : '/image/defaultHeader.png'}}" mode="aspectFill"></image>
+      </view>
+    </view>
+
+    <!-- 信息 -->
+    <view class="info">
+      <view class="sex">
+        <view class="img">
+          <image wx:if="{{detail.sex == 1}}" src="/image/sex1.png" mode="aspectFill"></image>
+          <image wx:if="{{detail.sex == 2}}" src=" /image/sex2.png" mode="aspectFill"></image>
+        </view>
+      </view>
+      <view class="breed">{{detail.breed}}</view>
+      <view class="age">{{detail.age}}岁</view>
+    </view>
+
+    <!-- 数据 -->
+    <view class="data">
+      <view>
+        <view class="num">{{detail.fans}}</view>
+        <view class="tag">宠粉</view>
+      </view>
+      <view class="line"></view>
+      <view>
+        <view class="num">{{detail.like}}</view>
+        <view class="tag">云吸和赞</view>
+      </view>
+      <view class="line"></view>
+      <view>
+        <view class="num">{{detail.diaryNum}}</view>
+        <view class="tag">日记</view>
+      </view>
+    </view>
+
+    <!-- 编辑 -->
+    <view class="edit">
+      <view class="title">
+        编辑资料
+      </view>
+      <view class="share">
+        <view class="img">
+          <image src="/image/share.png" mode="aspectFill"></image>
+        </view>
+      </view>
+    </view>
+
+    <!-- 铭牌 -->
+    <view class="brand">
+      <view class="img">
+        <image src="/image/pen.png" mode="aspectFill"></image>
+      </view>
+      <view class="title" wx:if="{{detail.brand == ''}}">
+        添加宠物铭牌
+      </view>
+      <view class="title" wx:else>
+        {{detail.brand}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 日记 -->
+  <view class="diary">
+    <!-- 第一列 -->
+    <view class="line">
+      <view class="item" wx:for="{{detail.diary}}" wx:key="index" wx:if="{{index % 3 == 0}}">
+        <view class="img">
+          <image src="{{item.img}}" mode="widthFix"></image>
+        </view>
+        <view class="num">
+          <view class="img">
+            <image src="/image/see2.png" mode="aspectFill"></image>
+          </view>
+          <view>{{item.num}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- 第二列 -->
+    <view class="line">
+      <view class="item" wx:for="{{detail.diary}}" wx:key="index" wx:if="{{index % 3 == 1}}">
+        <view class="img">
+          <image src="{{item.img}}" mode="widthFix"></image>
+        </view>
+        <view class="num">
+          <view class="img">
+            <image src="/image/see2.png" mode="aspectFill"></image>
+          </view>
+          <view>{{item.num}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- 第三列 -->
+    <view class="line">
+      <view class="item" wx:for="{{detail.diary}}" wx:key="index" wx:if="{{index % 3 == 2}}">
+        <view class="img">
+          <image src="{{item.img}}" mode="widthFix"></image>
+        </view>
+        <view class="num">
+          <view class="img">
+            <image src="/image/see2.png" mode="aspectFill"></image>
+          </view>
+          <view>{{item.num}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 底部导航 -->
+<tabbar></tabbar>

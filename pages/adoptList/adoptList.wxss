@@ -1,0 +1,196 @@
+page {
+  background: #f8f8f8;
+}
+
+.adopt-list {
+  padding-bottom: 10vh;
+}
+
+.tab {
+  height: 120rpx;
+  line-height: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #828088;
+  font-size: 32rpx;
+  font-weight: 800;
+  background: #fff;
+}
+
+.tab>.item {
+  position: relative;
+}
+
+.tab>.sel {
+  color: #2b2b2b;
+  font-size: 40rpx;
+}
+
+.tab>view>.img {
+  position: absolute;
+  top: -27rpx;
+  right: -20rpx;
+  width: 14rpx;
+  height: 14rpx;
+}
+
+.list>.item {
+  background: #fff;
+  padding: 35rpx 41rpx 24rpx 41rpx;
+  margin-top: 20rpx;
+}
+
+.item>.top {
+  display: flex;
+  align-items: center;
+}
+
+.item>.top>.img {
+  width: 97rpx;
+  height: 97rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 32rpx;
+}
+
+.item>.top>.r {
+  flex: 1;
+}
+
+.item>.top>.r>.name {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 15rpx;
+}
+
+.item>.top>.r>.info {
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  line-height: 43rpx;
+}
+
+.item>.top>.r>.info>view {
+  margin-right: 10rpx;
+}
+
+.item>.top>.r>.info>.sex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f1eff7;
+  width: 43rpx;
+  height: 43rpx;
+}
+
+.item>.top>.r>.info>.sex>.img {
+  margin: auto;
+  width: 13rpx;
+  height: 21rpx;
+  line-height: 0;
+}
+
+.item>.top>.r>.info>.breed {
+  color: #43CF7C;
+  background: #f4fdf8;
+  padding: 0 10rpx;
+}
+
+.item>.top>.r>.info>.age {
+  background: #fef9f3;
+  color: #FF8D1A;
+  padding: 0 10rpx;
+}
+
+.item>.top>.code {
+  position: relative;
+  padding: 20rpx 0;
+}
+
+.item>.top>.code {
+  position: relative;
+  padding: 20rpx;
+}
+
+.item>.top>.code>.img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 41rpx;
+  height: 41rpx;
+}
+
+.item>.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 34rpx 0;
+}
+
+.item>.content>.l {
+  display: flex;
+  align-items: center;
+}
+
+.item>.content>.l>view {
+  margin-right: 18rpx;
+}
+
+.item>.content>.r>view {
+  margin-left: 18rpx;
+}
+
+.list>.item .btn {
+  font-size: 28rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 30rpx;
+  border: 1rpx solid #ececec;
+  color: #828088;
+}
+
+.list>.item .btn2 {
+  font-size: 28rpx;
+  color: #fff;
+  background: #9139ff;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 30rpx;
+}
+
+.list>.item .btn3 {
+  font-size: 28rpx;
+  color: #fff;
+  background: #dba72a;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 30rpx;
+}
+
+.list>.item .btn4 {
+  font-size: 28rpx;
+  color: #fff;
+  background: #e85d64;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 30rpx;
+}
+
+.item>.footer>.notice {
+  background: #f8f8f8;
+  color: #A0A0A0;
+  display: flex;
+  align-items: center;
+  font-size: 25rpx;
+  padding: 0 27rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.item>.footer>.notice>.img {
+  width: 27rpx;
+  height: 23rpx;
+  margin-right: 19rpx;
+  line-height: 0;
+}

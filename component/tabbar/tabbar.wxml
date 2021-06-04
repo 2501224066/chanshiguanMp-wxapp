@@ -1,0 +1,12 @@
+<view class="tabbar" style="height:{{iphoneFooter ? 138 : 100}}rpx">
+  <view class="content">
+    <view class="item" wx:for="{{list}}" wx:key="index" bindtap="switchTab" data-path="{{item.pagePath}}"
+        data-index="{{index}}">
+      <view class="img">
+        <image src="{{index == selected ?  item.selectedIconPath : item.iconPath}}" mode="aspectFill"></image>
+      </view>
+      <view wx:if="{{index != 2}}" class="title" style="color: {{index == selected ? selectedColor :color}}">{{item.text}}</view>
+    </view>
+  </view>
+</view>
+<view style="height:{{iphoneFooter ?  138 : 100}}rpx;"></view>

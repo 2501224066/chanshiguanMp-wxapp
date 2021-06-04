@@ -1,0 +1,29 @@
+<view class="my-pets">
+  <!-- 顶部导航 -->
+  <navbar type="1" title="我的宠物"></navbar>
+
+  <!-- 列表 -->
+  <view class="list">
+    <view class="item" wx:for="{{5}}">
+      <view class="img">
+        <image src="/image/defaultHeader.png" mode="aspectFill"></image>
+      </view>
+      <view class="content">
+      <view class="name">宠物的昵称</view>
+      <view class="info">
+            <view class="sex">
+              <view class="img">
+                <image src="/image/sex1.png" mode="aspectFill"></image>
+              </view>
+            </view>
+            <view class="breed">布偶猫</view>
+            <view class="age">8岁</view>
+          </view>
+      <view class="memo">宠物的铭牌签名...</view>
+      </view>
+      <view class="r">
+        <image src="/image/right2.png" mode="aspectFill"></image>
+      </view>
+    </view>
+  </view>
+</view>

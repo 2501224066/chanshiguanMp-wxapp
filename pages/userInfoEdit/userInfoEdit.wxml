@@ -1,0 +1,92 @@
+<view class="user-info-edit">
+  <!-- 顶部导航 -->
+  <navbar type="1" title="编辑资料"></navbar>
+
+  <view class="box">
+    <view class="img">
+      <image src="/image/defaultHeader.png" mode="aspectFill"></image>
+    </view>
+
+    <view class="item">
+      <view class="tag">昵称</view>
+      <view class="ipt">
+        <input type="text" value="太君" placeholder="请填写昵称"/>
+      </view>
+      <view class="img">
+        <image src="/image/right.png" mode="aspectFill"></image>
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="tag">Uid</view>
+      <view class="ipt">23141</view>
+      <view class="img">
+        <image src="/image/right.png" mode="aspectFill"></image>
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="tag">性别</view>
+      <view class="ipt">
+        <picker bindchange="sex" value="{{sexIndex}}" range="{{sex}}">
+          <view class="placeholder">{{sex[sexIndex]}}</view>
+        </picker>
+      </view>
+      <view class="img">
+        <image src="/image/right.png" mode="aspectFill"></image>
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="tag">生日</view>
+      <view class="ipt">
+        <picker bindchange="date" value="{{date}}" mode="date">
+          <view class="placeholder">{{date}}</view>
+        </picker>
+      </view>
+      <view class="img">
+        <image src="/image/right.png" mode="aspectFill"></image>
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="tag">位置</view>
+      <view class="ipt">
+        <picker bindchange="region" value="{{region}}" mode="region">
+          <view class="placeholder">{{region[0]}}，{{region[1]}}，{{region[2]}}</view>
+        </picker>
+      </view>
+      <view class="img">
+        <image src="/image/right.png" mode="aspectFill"></image>
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="tag">地址</view>
+      <view class="ipt">
+        <input type="text" value="" placeholder="请填写详细地址" placeholder-class="placeholder" />
+      </view>
+      <view class="img">
+        <image src="/image/right.png" mode="aspectFill"></image>
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="tag">个性签名</view>
+      <view class="ipt">
+        <input type="text" value="" placeholder="介绍您的兴趣" placeholder-class="placeholder" />
+      </view>
+      <view class="img">
+        <image src="/image/right.png" mode="aspectFill"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 底部 -->
+<view class="footer" style="height:{{iphoneFooter ? 158 : 120}}rpx">
+  <view class="content">
+    退出登陆
+  </view>
+</view>
+<view style="height:{{iphoneFooter ? 158 : 120}}rpx"></view>

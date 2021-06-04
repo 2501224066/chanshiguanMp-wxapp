@@ -1,0 +1,38 @@
+<view class="diary-card">
+  <view class="video" wx:if="{{detail.type == 2}}">
+    <image src="/image/video.png"></image>
+  </view>
+  <view class="item">
+    <view class="img">
+      <image src="{{detail.img}}" mode="widthFix"></image>
+    </view>
+    <view class="content">
+      <view class="title">{{detail.title}}</view>
+
+      <view class="name" wx:if="{{delete}}">
+        <view class="item">{{detail.time}}</view>
+        <view class="item">
+          <view class="img3">
+            <image src="/image/del.png"></image>
+          </view>
+        </view>
+      </view>
+
+      <view class="name" wx:else>
+        <view class="item">
+          <view class="img">
+            <image src="{{detail.defaultHeader ? detail.defaultHeader : '/image/defaultHeader.png'}}"></image>
+          </view>
+          <view>{{detail.name}}</view>
+        </view>
+        <view class="item">
+          <view class="img2">
+            <image src="/image/see.png"></image>
+          </view>
+          <view>{{detail.num}}</view>
+        </view>
+      </view>
+      
+    </view>
+  </view>
+</view>
